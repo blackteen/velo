@@ -23,6 +23,27 @@
     }
 })();
 $(document).ready(function(){
+    let toCard = function(){
+        $(".buy-button").click(function(){
+            let src =$(this).parents(".catalog-elem").find("img").attr("src")
+            let name =$(this).parents(".catalog-elem").find(".name").text()
+            $(".pop-img").attr("src",src)
+            $(".popup-name").text(name)
+            openPopup()
+        })
+        $(".close-button-buy, .continue-buy").click(function(){
+            closePopup()
+        })
+        function openPopup(){
+            $("#buyPopup").fadeIn()
+        }  
+        function closePopup(){
+            $("#buyPopup").fadeOut()
+        }
+       
+    }
+
+    toCard()
     $('.type-choose-catalog-element button').click(function () {
         $(this).parents().siblings(".type-choose-catalog-element").removeClass('opened');
         $(this).parents().siblings(".type-choose-catalog-element").children().children().children().removeClass('opened');
