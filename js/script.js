@@ -26,6 +26,12 @@
 })();
 
 $(document).ready(function () {
+    $("#openButton").click(function () {
+        $(".menu ul").slideToggle()
+    })
+    $(".sub-menu").click(function () {
+        $(".menu ul .choose-type-wrapper ").toggleClass("opened")
+    })
     //add to card popup
     let toCard = function () {
         $(".buy-button").click(function () {
@@ -90,11 +96,11 @@ $(document).ready(function () {
         infinite: true,
         focusOnSelect: true,
         responsive: [{
-            breakpoint: 1025,
+            breakpoint: 991,
             settings: {
-                arrows: true,
-                centerMode: true,
-                centerPadding: "40px",
+                arrows: false,
+                centerMode: false,
+                centerPadding: "0px",
                 slidesToShow: 1,
                 swipe: true
             }
