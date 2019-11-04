@@ -34,17 +34,34 @@ $(document).ready(function () {
             $(".pop-img").attr("src", src)
             $(".popup-name").text(name)
             openPopup()
+            priceDetection.call(this)
+            condition.call(this)
         })
         $(".close-button-buy, .continue-buy").click(function () {
             closePopup()
         })
-
         function openPopup() {
             $("#buyPopup").fadeIn()
         }
-
         function closePopup() {
             $("#buyPopup").fadeOut()
+        }
+        function priceDetection() {
+            let price = $(this).parents(".catalog-elem").find(".price");
+            let actual = price.children(".actual").text();
+            let newI = price.children(".new").text();
+            $(".price-name").text(actual || newI)
+        }
+        function condition() {
+            let conditionItem = $(this).parents(".elem-text").find(".condition").data('condition')
+            if (conditionItem) {
+                $(".condition-yes").css("display", "flex")
+                $(".condition-no").css("display", "none")
+            } else {
+                $(".condition-no").css("display", "flex")
+                $(".condition-yes").css("display", "none")
+            }
+
         }
 
     }
