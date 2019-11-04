@@ -1892,6 +1892,8 @@ footer article {
 }
 
 #buyPopup .popup-body {
+    width: 100%;
+    max-width: 450px;
     background: #ffffff;
     position: fixed;
     top: 50%;
