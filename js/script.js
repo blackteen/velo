@@ -33,24 +33,28 @@ $(document).ready(function () {
         $(".menu ul .choose-type-wrapper ").toggleClass("opened")
     })
     //add to card popup
-    let toCard = function () {
+    let toCard = (function () {
+        let buyButton = $("#buyPopup");
         $(".buy-button").click(function () {
-            let src = $(this).parents(".catalog-elem").find("img").attr("src")
-            let name = $(this).parents(".catalog-elem").find(".name").text()
-            $(".pop-img").attr("src", src)
-            $(".popup-name").text(name)
             openPopup()
+            fillLines.call(this)
             priceDetection.call(this)
             condition.call(this)
         })
         $(".close-button-buy, .continue-buy").click(function () {
             closePopup()
         })
+        function fillLines(){
+            let src = $(this).parents(".catalog-elem").find("img").attr("src")
+            let name = $(this).parents(".catalog-elem").find(".name").text()
+            $(".pop-img").attr("src", src)
+            $(".popup-name").text(name)
+        }
         function openPopup() {
-            $("#buyPopup").fadeIn()
+            buyButton.fadeIn()
         }
         function closePopup() {
-            $("#buyPopup").fadeOut()
+            buyButton.fadeOut()
         }
         function priceDetection() {
             let price = $(this).parents(".catalog-elem").find(".price");
@@ -67,11 +71,9 @@ $(document).ready(function () {
                 $(".condition-no").css("display", "flex")
                 $(".condition-yes").css("display", "none")
             }
-
         }
+    })();
 
-    }
-    toCard()
 
     //dropdown
     $('.type-choose-catalog-element button').click(function () {
@@ -79,6 +81,12 @@ $(document).ready(function () {
         $(this).parents().siblings(".type-choose-catalog-element").children().children().children().removeClass('opened');
         $(this).parents(".type-choose-catalog-element").toggleClass('opened');
         $(this).toggleClass('opened');
+        $(document).mouseup(function(e){
+           let container = $(".type-choose-catalog-element")
+           if (!container.is(e.target) && container.has(e.target).length === 0) { 
+                container.removeClass('opened');
+		    }
+        })
     });
 
     //callback popup

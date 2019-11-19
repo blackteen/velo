@@ -1819,7 +1819,10 @@ footer article {
     max-width: 500px;
     margin: 20px auto;
 }
-
+.pop-img{
+    margin: auto;
+    display: block;
+}
 .callback input[type='text'] {
     width: 100%;
     margin-bottom: 20px;
@@ -2251,5 +2254,8 @@ footer article {
         color: #888888;
         font-size: 10px;
         text-decoration: none;
+    }
+    #buyPopup .popup-body{   
+        padding: 20px 5px 40px;
     }
 }
