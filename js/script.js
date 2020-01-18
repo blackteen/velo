@@ -21,6 +21,7 @@
             [...links].forEach(el => {
                 el.classList.add('vissible')
             });
+            button.style.display = "none"
         }, false)
     }
 })();
