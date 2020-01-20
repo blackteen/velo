@@ -421,6 +421,8 @@ footer article {
 .category-delivery-wrapp>p {
     width: 50%;
     margin-top: 20px;
+    color: #999999;
+    line-height: 24px;
 }
 
 .delivery-category {
@@ -522,6 +524,29 @@ footer article {
     margin: 0;
 }
 
+aside .article figure {
+    height: 352px;
+    overflow: hidden;
+}
+.article-item{
+    margin-top: 40px;
+}
+
+aside .article figcaption {
+    bottom: 30px;
+}
+
+aside .article p, 
+.general-articles-item p {
+    margin: 0 0px 10px;
+    color: #999999;
+}
+.general-articles-item .article-body article p {
+    font-size: 16px;
+    margin: 25px 0 20px;
+    line-height: 23px;
+}
+
 .article figcaption {
     position: absolute;
     bottom: 50px;
@@ -541,8 +566,24 @@ footer article {
     color: #fff;
     font-size: 23px;
 }
+aside .article figcaption h3{
+    margin: 0 0 25px;
+}
 
-.article figcaption a {
+section.articles {
+    display: flex;
+    justify-content: space-between;
+}
+.articles aside{
+    width: 44%;
+    height: 100%;
+    background: #f5fce0;
+    padding: 30px 50px 50px;
+}
+.general-articles{
+    width: 50%;
+}
+.article figcaption a, .general-articles-item a{
     color: #111;
     text-decoration: none;
     background: #ffcc01;
@@ -553,13 +594,42 @@ footer article {
     width: 60%;
 }
 
-.article figcaption a:after {
+.article figcaption a:after, .general-articles-item a:after{
     content: '';
     width: 22px;
     height: 12px;
     background: url(../img/articlesArrow.png) 0 0/contain no-repeat;
     display: block;
 }
+
+.general-articles-item{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 35px;
+}
+
+.article-body{
+    display: flex;
+}
+.article-body article{
+    padding: 0 25px;
+    width: calc(100% - 250px);
+}
+.article-body figure{
+    max-width: 250px;
+    width: 250px;
+    overflow: hidden;
+}
+.article-body article  a, .article figcaption a{
+  
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 170px;
+}
+.article-body h4{
+    font-size: 20px;
+}
+
 
 .single-article {
     width: 53.4%;
@@ -1154,8 +1224,6 @@ footer article {
     position: static;
     width: auto;
     height: auto;
-    /* margin-top: 18px; */
-    /* margin-right: 50px; */
     margin: unset;
 }
 
@@ -1177,7 +1245,7 @@ footer article {
 
 .brand-catalog .catalog-elem>figure {
     margin-bottom: 0;
-    min-height: 110px;
+    min-height: 95px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1551,7 +1619,6 @@ footer article {
 
 .selects-wrapper {
     align-items: baseline;
-    justify-content: space-between;
     width: 100%;
 }
 
@@ -1593,7 +1660,8 @@ footer article {
     height: 40px;
     display: flex;
     color: #666;
-    position: relative
+    position: relative;
+    min-width: 120px;
 }
 
 .select:before {
@@ -1619,6 +1687,7 @@ footer article {
     cursor: pointer;
     border: 2px solid #666666;
     transition: .5s;
+    margin-right: 20px;
 }
 
 .filter-submit:hover {
@@ -1637,8 +1706,12 @@ footer article {
     width: 67%;
 }
 
+.select-items .select {
+    margin-right: 20px;
+}
+
 .filter-controls {
-    width: 19%;
+
     display: flex;
     justify-content: space-between;
 }
@@ -2015,12 +2088,11 @@ footer article {
 }
 
 .reviews-body {
-    padding: 30px 20px 7px;
+    padding: 30px 20px 30px;
     border: 1px solid #ffcc01;
-
     position: relative;
     margin-top: 20px;
-    min-height: 250px;
+    /* min-height: 250px; */
 }
 
 .reviews-body p {
@@ -2060,6 +2132,66 @@ footer article {
 
 .reviews-good a:hover {
     text-decoration: none;
+}
+
+
+.reviews-articles {
+    display: flex;
+}
+
+.reviews-articles .reviews-page {
+    justify-content: start;
+}
+
+.reviews-articles .reviews-item {
+    width: 45%;
+
+}
+
+.reviews-articles .reviews-item:first-child {
+
+    margin: 0 10% 0 0;
+}
+
+.categories-articles .categories-articles-item {
+    color: #000;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    text-decoration: none;
+}
+
+.categories-articles .categories-articles-item:hover {
+    text-decoration: underline;
+}
+
+.subheadline-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+}
+
+.subheadline-box a {
+    color: #22b14c;
+}
+
+.catgories-reviews {
+    flex: 4.9 1;
+    margin: 0 5% 0 0;
+}
+
+.categories-articles {
+    background: #f5fce0;
+    padding: 35px 45px 20px 45px;
+    flex: 1.7 1;
+    max-height: 300px;
+}
+
+.read-more {
+    color: #22b14c;
+    font-style: italic;
 }
 
 .basket-left p {
