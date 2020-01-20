@@ -481,7 +481,7 @@ footer article {
 
 .headline {
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin: 30px 0;
     font-size: 24px;
     font-weight: bold;
 }
@@ -495,6 +495,11 @@ footer article {
 }
 
 /*article*/
+.article-deital-item{
+    color: #666;
+    line-height: 24px;
+}
+
 .articles-block {
     display: flex;
     justify-content: space-between;
@@ -537,7 +542,8 @@ aside .article figcaption {
 }
 
 aside .article p, 
-.general-articles-item p {
+.general-articles-item p,
+.article-deital-wrapper .general-articles > p {
     margin: 0 0px 10px;
     color: #999999;
 }
@@ -546,6 +552,31 @@ aside .article p,
     margin: 25px 0 20px;
     line-height: 23px;
 }
+aside.article-deital .subhadline{
+    margin-bottom: 30px;
+}
+
+
+
+aside.article-deital .article-body article p{
+    margin:  5px 0 20px;
+}
+aside.article-deital .general-articles-item h4{
+    font-size: 18px;
+}
+aside.article-deital .general-articles-item .article-body article p {
+    font-size: 14px;
+    text-overflow:ellipsis;;overflow:hidden;
+    max-height:150px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+/* div{display:block;width:300px;
+ 
+  } */
+
 
 .article figcaption {
     position: absolute;
@@ -574,6 +605,7 @@ section.articles {
     display: flex;
     justify-content: space-between;
 }
+
 .articles aside{
     width: 44%;
     height: 100%;
@@ -582,7 +614,21 @@ section.articles {
 }
 .general-articles{
     width: 50%;
+    margin-bottom: 50px;
 }
+
+.articles.article-deital-wrapper .general-articles {
+    width: 55%;
+}
+.articles.article-deital-wrapper .article-deital {
+    width: 40%;
+}
+
+.general-articles img, iframe{
+    max-width: 100%;
+    height: auto;
+}
+
 .article figcaption a, .general-articles-item a{
     color: #111;
     text-decoration: none;
@@ -602,7 +648,7 @@ section.articles {
     display: block;
 }
 
-.general-articles-item{
+.general-articles-item:not(:last-child){
     padding-bottom: 30px;
     border-bottom: 1px solid #e6e6e6;
     margin-bottom: 35px;
@@ -2318,6 +2364,26 @@ section.articles {
     .velo-type>article {
         margin: auto
     }
+    .article-body figure{
+        width: 35%;
+    }
+    .article-body figure img{
+        max-width: 100%;
+    }
+    .article-body article{
+        width: 100%;
+    }
+
+    .selects-wrapper {
+        align-items: baseline;
+        width: 100%;
+        flex-direction: column;
+    }
+    .select-items {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
 
 }
 
@@ -2359,9 +2425,48 @@ section.articles {
         flex-wrap: wrap;
     }
 
+    aside .article figure img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+ 
+
 }
 
 @media(max-width:991px) {
+    .flex.about, .about-center, .flex.about-form, section.articles{
+        flex-direction: column;
+    }
+    .flex.about-form input{
+        flex-basis: auto;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .articles.article-deital-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center
+    }
+    .articles.article-deital-wrapper 
+    .general-articles, 
+    .articles.article-deital-wrapper .article-deital, 
+    .about-sides,
+    .articles aside, 
+    .general-articles{
+        width: 100%;
+    }
+    aside{
+        margin-bottom: 30px;
+    }
+    .article-body figure{
+        width: 50%;
+    }
     .reviews-item {
         width: 45%;
     }
@@ -2477,6 +2582,9 @@ section.articles {
 }
 
 @media(max-width:767px) {
+    .catalog-pagination{
+        width: 300px;
+    }
     .catalog.slide-catalog .item_element {
         width: 320px;
     }
@@ -2593,7 +2701,6 @@ section.articles {
         display: flex;
     }
 
-
     .carousel-goods-description {
         flex-wrap: wrap;
         justify-content: space-around;
@@ -2615,7 +2722,13 @@ section.articles {
 }
 
 @media(max-width:500px) {
+    .articles aside{
+        padding: 30px 20px 50px;
+    }
     .reviews-item {
         width: 90%;
+    }
+    .fourhundredfour article{
+        width: 100%;
     }
 }
