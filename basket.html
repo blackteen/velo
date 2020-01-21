@@ -79,19 +79,65 @@
         <div class="container">
             <div class="breadcrambs flex">
                 <p class="flex"><a class="flex" href="#">Главная</a></p>
-                <p class="flex"><a class="flex" href="#">Велосипеды</a></p>
-                <p class="flex"><a class="flex" href="#">Бренды велосипедов</a></p>
+                <p class="flex"><a class="flex" href="#">Корзина</a></p>
+                <p class="flex"><a class="flex" href="#">Оформление заказа</a></p>
             </div>
         </div>
     </header>
     <main>
         <div class="container">
-            <h2 class="headline">Заказ принят</h2>
+            <h2 class="headline">Оформление заказа</h2>
             <section class="basket">
                 <div class="basket-sides basket-left">
-                   <div class="contacts-data basket-section"></div>
-                   <div class="basket-delivery basket-section"></div>
-                   <div class="contacts-data basket-section"></div>
+                    <div class="step contacts-data basket-section active-step">
+                        <div class="refactor">
+                            Редактировать
+                            <img src="img/ref.png">
+                        </div>
+                        <h5><span>1</span>Контактные данные</h5>
+                        <label><span>Имя и фамилия:</span>
+                            <input type="text" required placeholder="ФИО">
+                        </label>
+                        <label><span>Телефон:</span>
+                            <input type="text" id="phone" required placeholder="+380  (__)  ___  __  __">
+                        </label>
+                        <label><span>Эл. почта:</span>
+                            <input type="email" required placeholder="Эл. почта">
+                            <small class="attention">Если вы хотите следить за статусом заказа</small>
+                        </label>
+                        <button id="next-step">Продолжить</button>
+                    </div>
+                    <div class="step basket-delivery basket-section initial-state">
+                        <div class="refactor">
+                            Редактировать
+                            <img src="img/ref.png">
+                        </div>
+                        <h5><span>2</span>Выбор способов доставки и оплаты</h5>
+                        <label><span>Служба доставки:</span>
+                            <div class="select">
+                                <select id="post">
+                                    <option>Новавая почта</option>
+                                    <option>Укрпочта</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label><span>Город</span>
+                            <input type="text" required placeholder="Ровно">
+                            <small class="attention">Например, <a href="">Киев</a></small>
+                        </label>
+                        <label><span>Пункт выдачи:</span>
+                            <input type="text" required placeholder="Номер отделения (или адрес)">
+                        </label>
+                        <label><span>Способ оплаты:<button class="que">?</button></span>
+                            <div class="select">
+                                <select id="paySystem">
+                                    <option>Наложенный платеж</option>
+                                    <option>22</option>
+                                </select>
+                            </div>
+                        </label>
+                        <button id="action-checkout">Оформить заказ</button>
+                    </div>
                 </div>
                 <div class="basket-sides basket-rgit">
                     <section class="goods-card ">
@@ -182,6 +228,8 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js" async defer></script>
 </body>
 

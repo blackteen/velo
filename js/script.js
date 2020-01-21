@@ -115,4 +115,24 @@ $(document).ready(function () {
             }
         }]
     });
+
+    let basket = (function () {
+        $(".refactor").click(function(){
+            $(this).parent().removeClass("step-close")
+            $(this).parent().addClass("active-step")
+        })
+        $("#next-step").click(function(){
+            $(this).parent().removeClass("active-step")
+            $(this).parent().addClass("step-close")
+            $(".basket-delivery").removeClass("initial-state")
+            $(".basket-delivery").addClass("active-step")
+        })
+
+        jQuery(function($){
+            $("#phone").mask("+380 (99) 999-99-99")
+         });
+    })();
+
+
+
 });
