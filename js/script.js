@@ -133,6 +133,28 @@ $(document).ready(function () {
          });
     })();
 
+    //carusel-gallery
+    $('.big-foto').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.little-foto'
+    });
+    $('.little-foto').slick({
+        nextArrow: '<div class="slick-next"></div>',
+        prevArrow: '<div class="slick-prev"></div>',
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.big-foto',
+        centerMode: false,
+        focusOnSelect: true,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect:true
+    });
+
 
 
 });
