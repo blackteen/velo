@@ -3234,6 +3234,19 @@ iframe {
 }
 
 @media(max-width:500px) {
+    .fourhundredfour article p a {
+
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .fourhundredfour article p a::before {
+        margin: 0 5px 0 0;
+    }
+    .fourhundredfour article p:last-child a::before {
+        margin: 0 0 0 5px;
+    }
+
     .links-wrapper{
         flex-direction: column;
     }
