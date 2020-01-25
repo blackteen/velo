@@ -1543,7 +1543,7 @@ iframe {
 
 .type-choose-catalog .catalog-elem {
     padding: 10px;
-    max-width: 480px;
+    max-width: 100%;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -1594,6 +1594,7 @@ iframe {
 .top-type-choose button {
     border-radius: 50%;
     width: 50px;
+    min-width: 50px;
     height: 50px;
     background: #ebebeb url(../img/button-arrow.png) center no-repeat;
     align-self: center;
@@ -3319,11 +3320,40 @@ iframe {
     .cart .delivery{
         display: none;
     }
-    
+    .type-choose-catalog.slide-catalog .item_element.type-choose-catalog-element {
+        width: 47%
+    }
+    .type-choose .top-type-choose figure {
+        width: 95px;
+        height: 119px;
+    }
+    .type-choose-price p:last-child b {
+        font-size: 17px;
+    }
+    .about-from-wrapper h3{
+        font-size: 18px;
+    }
 
 }
 
 @media(max-width:767px) {
+
+    .catalog-elem .elem-text .name{
+        height: auto;
+    }
+
+
+    .catalog.slide-catalog .item_element {
+        width: 45%;
+    }
+
+
+    .catalog-property, .catalog-choose{
+        padding: 0;
+    }
+    .seo article:last-child, .seo article.seo-first{
+        padding: 0;
+    }
 
     .recently-reviwed .catalog .item_element, .with-good .catalog .item_element {
         margin: 0 7px;
@@ -3364,19 +3394,13 @@ iframe {
         width: 300px;
     }
 
-    .catalog.slide-catalog .item_element {
+    .recently-reviwed .catalog.slide-catalog .item_element, .with-good .catalog.slide-catalog .item_element{
         width: 320px;
     }
-
- 
 
     .brands {
         height: 100px
     }
-
-    /* .open-brand {
-        display: none;
-    } */
 
     .brands.opened {
         height: auto;
@@ -3435,6 +3459,12 @@ iframe {
 }
 
 @media(max-width:600px) {
+    .catalog.slide-catalog .catalog-elem{
+        max-width: 100%;
+    }
+    .catalog.slide-catalog .item_element{
+        width: 100%;
+    }
     .phone {
         margin: 20px auto 0;
     }
@@ -3537,10 +3567,6 @@ iframe {
         font-size: 15px;
     }
 
-    .type-choose-price p:last-child b {
-        font-size: 19px;
-    }
-
     .sub-menu>section {
         width: auto;
     }
@@ -3599,10 +3625,20 @@ iframe {
     #buyPopup .popup-body {
         padding: 20px 5px 40px;
     }
+    .type-choose-catalog.slide-catalog .item_element.type-choose-catalog-element {
+        width: 100%;
+    }
+    .type-choose-price {
+        width: 65%;
+    }
+    
 
 }
 
 @media(max-width:500px) {
+    .logo-image{
+        max-width: 160px;
+    }
     .articles .double-headline .headline{
         text-align: left;
     }

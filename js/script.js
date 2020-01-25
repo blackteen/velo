@@ -161,14 +161,19 @@ $(document).ready(function () {
                 slidesToShow: 3,
                 centerMode: true,
                 variableWidth: true
-            })
-            $(".recently-reviwed .catalog, .with-good .catalog").slick({
+            });
+            $(".recently-reviwed .catalog").slick({
+                slidesToShow: 3,
+                centerMode: true,
+                variableWidth: true
+            });
+            $(".with-good .catalog").slick({
                 slidesToShow: 3,
                 centerMode: true,
                 variableWidth: true
             })
         }
-    })($)
+    })()
 
 
 });
