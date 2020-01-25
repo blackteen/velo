@@ -2186,20 +2186,21 @@ iframe {
 
 #openButton {
     display: none;
-    border: 1px solid #ffcc01;
-    padding: 0 6px;
+    padding: 0 11px;
     width: 45px;
-    height: 30px;
-    justify-content: space-around;
+    height: 45px;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 15px 0;
+    background: #000;
 }
 
 #openButton div {
-    background: #ffcc01;
-    height: 2px;
+    background: #fff;
+    height: 3px;
     width: 100%;
+    margin: 2px 0;
 }
 
 
@@ -2910,7 +2911,9 @@ iframe {
     font-weight: bold;
 }
 
-
+.cart-tags{
+    margin-bottom: 30px;
+}
 .cart-tags h5{
     color: #999999;
     font-size: 19px;
@@ -2928,6 +2931,15 @@ iframe {
 .cart-tags span{
     color: #999999;
 }
+
+.busket.mobile{
+    display: none;
+}
+
+.articles .double-headline .headline{
+    margin: 0;
+}
+
 
 @media(max-width:1500px) {
     .articles-block img {
@@ -3016,6 +3028,7 @@ iframe {
 }
 
 @media(max-width:1200px) {
+    
     .menu ul li>a {
         font: 600 15px 'Roboto';
     }
@@ -3030,7 +3043,7 @@ iframe {
     }
 
     .phone-icon img {
-        display: none
+        /* display: none */
     }
 
     .sub-menu>section {
@@ -3041,7 +3054,7 @@ iframe {
 
 @media(max-width:1100px) {
     .pay-systems {
-        display: none;
+        justify-content: space-evenly;
     }
 
     img {
@@ -3077,6 +3090,11 @@ iframe {
 }
 
 @media(max-width:991px) {
+
+
+    .top-header {
+        display: none;
+    }
     .full-description .catgories-reviews {
         margin: 0;
     }
@@ -3298,10 +3316,21 @@ iframe {
     .category-delivery-wrapp>p {
         width: 100%;
     }
+    .cart .delivery{
+        display: none;
+    }
+    
 
 }
 
 @media(max-width:767px) {
+
+    .recently-reviwed .catalog .item_element, .with-good .catalog .item_element {
+        margin: 0 7px;
+    }
+    .gallery-carousel{
+        margin-bottom: 30px;
+    }
     .delivery-cart {
         margin-top: 30px;
     }
@@ -3339,20 +3368,22 @@ iframe {
         width: 320px;
     }
 
-    .delivery {
-        display: none;
-    }
+ 
 
     .brands {
-        height: auto
+        height: 100px
     }
 
-    .open-brand {
+    /* .open-brand {
         display: none;
+    } */
+
+    .brands.opened {
+        height: auto;
     }
 
     .brands figure {
-        width: auto;
+        width: 100%;
     }
 
     .brands {
@@ -3389,10 +3420,55 @@ iframe {
     .popup-body h2 {
         font-size: 18px;
     }
+    .delivery-item {
+        min-width: 191px;
+    }
+
+    .carousel-buy-button{
+        margin-top: 20px;
+    }
+    .tag {
+        padding: 10px;
+        text-align: center;
+    }
 
 }
 
 @media(max-width:600px) {
+    .phone {
+        margin: 20px auto 0;
+    }
+    .phone figure p {
+        margin: 0;
+        color: #000;
+        white-space: nowrap;
+        font-size: 26px;
+    }
+    .logo {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+    .busket{
+        display: none;
+    }
+
+    .busket.mobile{
+        display: block;
+    }
+    .delivery {
+       flex-direction: column;
+       padding: 30px 0;
+       height: auto;
+    }
+    .delivery-item{
+        margin-bottom: 20px;
+    }
+
+
     .contacts-sides.contacts-sides-left.flex .contacts-item {
         width: 100%;
         margin-bottom: 30px;
@@ -3527,6 +3603,12 @@ iframe {
 }
 
 @media(max-width:500px) {
+    .articles .double-headline .headline{
+        text-align: left;
+    }
+    .articles .double-headline  .more-link{
+        margin: 0;display: none;
+    }
     .fourhundredfour article p a {
 
         font-size: 13px;

@@ -155,6 +155,20 @@ $(document).ready(function () {
         focusOnSelect:true
     });
 
+    let tags = (function(){
+        if($(window).width() < 768){
+            $('.tags').slick({
+                slidesToShow: 3,
+                centerMode: true,
+                variableWidth: true
+            })
+            $(".recently-reviwed .catalog, .with-good .catalog").slick({
+                slidesToShow: 3,
+                centerMode: true,
+                variableWidth: true
+            })
+        }
+    })($)
 
 
 });

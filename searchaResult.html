@@ -25,65 +25,137 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header>
-        <div class="container">
-            <section class="top-header flex">
-                <nav id="topNavigation">
-                    <ul class="c-ul flex">
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Оплата и доставка</a></li>
-                        <li><a href="#">Гарантия</a></li>
-                        <li><a href="#">Акции</a></li>
-                        <li><a href="#">Статьи</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-                <article class="search">
-                    <form>
-                        <label class="search-wrapper">
-                            <input type="text" placeholder="Найти велосипед">
-                            <input type="submit">
-                        </label>
-                    </form>
-                </article>
-            </section>
-            <section class="main-header flex">
-                <figure class="logo">
-                    <a href="#"><img class="logo-image" src="img/logo.png"></a>
-                </figure>
-                <nav class="menu">
-                    <ul class="c-ul flex">
-                        <li><a href="#">Велосипеды</a></li>
-                        <li><a href="#">Запчасти</a></li>
-                        <li><a href="#">Аксессуары</a></li>
-                        <li><a href="#">Экипировка</a></li>
-                        <li><a href="#">Распродажа</a></li>
-                    </ul>
-                </nav>
-                <article class="phone">
-                    <figure class="phone-icon flex">
-                        <img src="img/phone.png">
-                        <p>+38 (096) 255 35 45</p>
+        <header>
+            <div class="container">
+                <section class="top-header flex">
+                 
+                    <nav id="topNavigation">
+                        <ul class="c-ul flex">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Оплата и доставка</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <article class="search">
+                        <form>
+                            <label class="search-wrapper">
+                                <input type="text" placeholder="Найти велосипед">
+                                <input type="submit">
+                            </label>
+                        </form>
+                    </article>
+                </section>
+                <section class="main-header flex">
+                    <figure class="logo">
+                        <div id="openButton">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <a href="#"><img class="logo-image" src="img/logo.png"></a>
+                        <article class="busket mobile">
+                            <figure class="basket-link">
+                                <img src="img/busket.png">
+                            </figure>
+                            <figcaption class="basket-counter">3</figcaption>
+                        </article>
                     </figure>
-
-                    <p><a href="#callback" class="open-popup-link">Перезвоните мне</a></p>
-                </article>
-                <article class="busket">
-                    <figure class="basket-link">
-                        <img src="img/busket.png">
-                    </figure>
-                    <figcaption class="basket-counter">3</figcaption>
-                </article>
-            </section>
-        </div>
-        <div class="container">
-            <div class="breadcrambs flex">
-                <p class="flex"><a class="flex" href="#">Главная</a></p>
-                <p class="flex"><a class="flex" href="#">Велосипеды</a></p>
-                <p class="flex"><a class="flex" href="#">Бренды велосипедов</a></p>
+                   
+                    <nav class="menu">
+                           
+                        <ul class="c-ul flex">
+                            <li class="sub-menu"><a href="#">Велосипеды</a>
+                                <section class="choose-type-wrapper flex">
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img1.png"></a>
+    
+                                        </figure>
+                                        <figcaption><a href="">Горные</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img2.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Двухподвесные</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img3.png">
+                                            </a></figure><a href="">
+                                        </a>
+                                        <figcaption><a href=""></a><a href="">Женские</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img4.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Детские</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img5.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Городские</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img6.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Шоссейные</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img7.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Складные</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img8.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Трюковые</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img9.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Электровелосипеды</a></figcaption>
+                                    </div>
+                                    <div class="choose-item">
+                                        <figure>
+                                            <a href=""><img src="img/items/img10.png"></a>
+                                        </figure>
+                                        <figcaption><a href="">Фэтбайки</a></figcaption>
+                                    </div>
+                                </section>
+                            </li>
+                            <li><a href="#">Запчасти</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                            <li><a href="#">Экипировка</a></li>
+                            <li><a href="#">Распродажа</a></li>
+                        </ul>
+                    </nav>
+                    <article class="phone">
+                        <figure class="phone-icon flex">
+                            <img src="img/phone.png">
+                            <p>+38 (096) 255 35 45</p>
+                        </figure>
+    
+                        <p><a href="#callback" class="open-popup-link">Перезвоните мне</a></p>
+                    </article>
+                    <article class="busket">
+                        <figure class="basket-link">
+                            <img src="img/busket.png">
+                        </figure>
+                        <figcaption class="basket-counter">3</figcaption>
+                    </article>
+                </section>
             </div>
-        </div>
-    </header>
+        </header>
     <main>
         <div class="container">
             <section>
